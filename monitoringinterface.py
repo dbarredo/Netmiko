@@ -7,7 +7,7 @@ password = input('Password: ')
 
 
 cisco = {
-   'device_type' : 'cisco_ios',
+   'device_type' : 'cisco_ios', #different vendor has difference device type check "https://pynet.twb-tech.com/blog/automation/netmiko.html" for reference
    'host' : f'{host}',
    'username' : f'{username}',
    'password' : f'{password}'
@@ -19,6 +19,6 @@ while True:
    if ("down") in output:
       print('\n')
       print('Port status down detected, Enabling now')
-      output1 = net_connect.send_config_set(['interface gigabitEthernet 0/1', 'no shutdown'])
+      output1 = net_connect.send_config_set(['interface gigabitEthernet 0/1', 'no shutdown']) #bounce the port once detected down or shutdown
   else:
       print('Monitoring Port')
