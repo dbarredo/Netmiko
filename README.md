@@ -7,6 +7,6 @@ Open source library designed to simplify SSH management across a wide range of n
 - pip3 install netmiko
 
 
-Netmiko Reference:
+Reference:
 
 [Netmiko Documentation](https://pynet.twb-tech.com/blog/automation/netmiko.html)
