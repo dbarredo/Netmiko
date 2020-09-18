@@ -1,4 +1,4 @@
-IP_LIST = open('switch_ip')
+IP_LIST = open('switch_ip.txt')
 for IP in IP_LIST:
     RTR = {
         'device_type': 'cisco_ios',
@@ -22,7 +22,7 @@ for IP in IP_LIST:
         print ('Make sure SSH is enabled' )
         continue
 
-    output = net_connect.send_config_from_file(config_file='18_switch_config')
+    output = net_connect.send_config_from_file(config_file='config.cfg')
     print(output)
 
     print('\n Saving the Switch configuration \n')
